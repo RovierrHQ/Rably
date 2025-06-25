@@ -53,10 +53,14 @@ async fn main() {
     // Initialize logging
     env_logger::init();
 
+    println!("🔧 Initializing Rably WebSocket server...");
+
     let state = AppState {
         channels: Arc::new(DashMap::new()),
         channel_presence: Arc::new(DashMap::new()),
     };
+
+    println!("🔧 Building router...");
 
     // Build the router with CORS support
     let app = Router::new()
@@ -73,8 +77,28 @@ async fn main() {
     println!("📡 WebSocket endpoint: ws://localhost:{}/ws", port);
     println!("🏥 Health check: http://localhost:{}/health", port);
 
-    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
+    println!("🔧 Creating TCP listener...");
+    let listener = match tokio::net::TcpListener::bind(addr).await {
+        Ok(listener) => {
+            println!("✅ TCP listener bound successfully to {}", addr);
+            listener
+        }
+        Err(e) => {
+            eprintln!("❌ Failed to bind to {}: {}", addr, e);
+            std::process::exit(1);
+        }
+    };
+
+    println!("🔧 Starting axum server...");
+    match axum::serve(listener, app).await {
+        Ok(_) => {
+            println!("✅ Server shut down gracefully");
+        }
+        Err(e) => {
+            eprintln!("❌ Server error: {}", e);
+            std::process::exit(1);
+        }
+    }
 }
 
 // Health check endpoint
@@ -117,7 +141,7 @@ async fn handle_socket(socket: WebSocket, state: AppState) {
 
     println!("🔌 Client {} connected", client_id);
 
-            // Create a channel for outgoing messages
+    // Create a channel for outgoing messages
     let (outgoing_tx, mut outgoing_rx) = tokio::sync::mpsc::unbounded_channel::<String>();
 
     // Spawn task to handle outgoing messages
@@ -236,5 +260,5 @@ async fn handle_socket(socket: WebSocket, state: AppState) {
     // Cleanup
     sender_handle.abort();
 
-        println!("🔌 Client {} disconnected", client_id);
+    println!("🔌 Client {} disconnected", client_id);
 }
