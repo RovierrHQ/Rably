@@ -1,0 +1,305 @@
+{
+  "document": "doc.report.command",
+  "version": "ov/command/slim/1.1",
+  "engine": "darwin/arm64|Aurora|1.41.7|latest|latest",
+  "containerized": false,
+  "host_distro": {
+    "name": "",
+    "version": "",
+    "display_name": "other"
+  },
+  "type": "slim",
+  "state": "done",
+  "target_reference": "rably:latest",
+  "system": {
+    "type": "Linux",
+    "release": "6.14.10-orbstack-00291-g1b252bd3edea",
+    "distro": {
+      "name": "Debian GNU/Linux",
+      "version": "12",
+      "display_name": "Debian GNU/Linux 12 (bookworm)"
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:e128e64d73257df1cc4f431e35c2e3edcbeaba76fff43c9d730d0bcd685f0629",
+      "tags": [
+        "latest"
+      ],
+      "names": [
+        "rably:latest"
+      ]
+    },
+    "size": 1117507592,
+    "size_human": "1.1 GB",
+    "create_time": "2025-06-25T09:08:33Z",
+    "runtime_name": "docker",
+    "architecture": "arm64",
+    "exposed_ports": [
+      "8080/tcp"
+    ],
+    "os": "linux",
+    "labels": {
+      "org.opencontainers.image.source": "https://github.com/rust-lang/docker-rust"
+    },
+    "env_vars": [
+      "PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "RUSTUP_HOME=/usr/local/rustup",
+      "CARGO_HOME=/usr/local/cargo",
+      "RUST_VERSION=1.87.0"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 11236745,
+  "minified_image_size_human": "11 MB",
+  "minified_image": "rably:slim",
+  "minified_image_id": "sha256:a85718848a12b0b0f4dd8183e747345900e8f658e0f030d6acb796c65561eeed",
+  "minified_image_digest": "sha256:a919805ce6dccd7a97c0692a4af0a1cb6027355cf68212c453273da9a86a2a63",
+  "minified_image_has_data": true,
+  "minified_by": 99.45118377252487,
+  "artifact_location": "/opt/homebrew/bin/.mint-state/images/e128e64d73257df1cc4f431e35c2e3edcbeaba76fff43c9d730d0bcd685f0629/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "rably-seccomp.json",
+  "apparmor_profile_name": "rably-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": true,
+      "id": "sha256:e128e64d73257df1cc4f431e35c2e3edcbeaba76fff43c9d730d0bcd685f0629",
+      "full_name": "rably:latest",
+      "repo_name": "rably",
+      "version_tag": "latest",
+      "raw_tags": [
+        "rably:latest"
+      ],
+      "create_time": "2025-06-25T09:08:33Z",
+      "new_size": 1117507592,
+      "new_size_human": "1.1 GB",
+      "instructions": [
+        {
+          "type": "RUN",
+          "time": "2025-05-15T12:43:34Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 97205449,
+          "size_human": "97 MB",
+          "command_snippet": "RUN []",
+          "command_all": "RUN []",
+          "system_commands": [
+            "[]"
+          ],
+          "comment": "debuerreotype 0.15",
+          "inst_set_time_bucket": "2025-05-15T18:30:00+06:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "LABEL",
+          "time": "2025-05-15T12:43:34Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "org.opencontainers.image.source=https://github.com/rust-lang/docker-rust",
+          "command_snippet": "LABEL org.opencontainers.image.source=https:...",
+          "command_all": "LABEL org.opencontainers.image.source=https://github.com/rust-lang/docker-rust",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-05-15T18:30:00+06:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "ENV",
+          "time": "2025-05-15T12:43:34Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.87.0",
+          "command_snippet": "ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME...",
+          "command_all": "ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.87.0",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-05-15T18:30:00+06:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "RUN",
+          "time": "2025-05-15T12:43:34Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 699004364,
+          "size_human": "699 MB",
+          "command_snippet": "RUN set -eux;     apt-get update;     apt-ge...",
+          "command_all": "RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch=\"$(dpkg --print-architecture)\";     case \"${dpkgArch##*-}\" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='20a06e644b0d9bd2fbdbfd52d42540bdde820ea7df86e92e533c073da0cdd43c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='3b8daab6cc3135f2cd4b12919559e6adaee73a2fbefb830fadf0405c20231d61' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='e3853c5a252fca15252d07cb23a1bdd9377a8c6f3efa01531109281ae47f841c' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='a5db2c4b29d23e9b318b955dd0337d6b52e93933608469085c924e0d05b1df1f' ;;         ppc64el) rustArch='powerpc64le-unknown-linux-gnu'; rustupSha256='acd89c42b47c93bd4266163a7b05d3f26287d5148413c0d47b2e8a7aa67c9dc0' ;;         s390x) rustArch='s390x-unknown-linux-gnu'; rustupSha256='726b7fd5d8805e73eab4a024a2889f8859d5a44e36041abac0a2436a52d42572' ;;         *) echo >&2 \"unsupported architecture: ${dpkgArch}\"; exit 1 ;;     esac;     url=\"https://static.rust-lang.org/rustup/archive/1.28.2/${rustArch}/rustup-init\";     wget \"$url\";     echo \"${rustupSha256} *rustup-init\" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;",
+          "system_commands": [
+            "set -eux",
+            "apt-get update",
+            "apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget",
+            "dpkgArch=\"$(dpkg --print-architecture)\"",
+            "case \"${dpkgArch##*-}\" in         amd64) rustArch='x86_64-unknown-linux-gnu'",
+            "rustupSha256='20a06e644b0d9bd2fbdbfd52d42540bdde820ea7df86e92e533c073da0cdd43c'",
+            "",
+            "armhf) rustArch='armv7-unknown-linux-gnueabihf'",
+            "rustupSha256='3b8daab6cc3135f2cd4b12919559e6adaee73a2fbefb830fadf0405c20231d61'",
+            "",
+            "arm64) rustArch='aarch64-unknown-linux-gnu'",
+            "rustupSha256='e3853c5a252fca15252d07cb23a1bdd9377a8c6f3efa01531109281ae47f841c'",
+            "",
+            "i386) rustArch='i686-unknown-linux-gnu'",
+            "rustupSha256='a5db2c4b29d23e9b318b955dd0337d6b52e93933608469085c924e0d05b1df1f'",
+            "",
+            "ppc64el) rustArch='powerpc64le-unknown-linux-gnu'",
+            "rustupSha256='acd89c42b47c93bd4266163a7b05d3f26287d5148413c0d47b2e8a7aa67c9dc0'",
+            "",
+            "s390x) rustArch='s390x-unknown-linux-gnu'",
+            "rustupSha256='726b7fd5d8805e73eab4a024a2889f8859d5a44e36041abac0a2436a52d42572'",
+            "",
+            "*) echo >&2 \"unsupported architecture: ${dpkgArch}\"",
+            "exit 1",
+            "",
+            "esac",
+            "url=\"https://static.rust-lang.org/rustup/archive/1.28.2/${rustArch}/rustup-init\"",
+            "wget \"$url\"",
+            "echo \"${rustupSha256} *rustup-init\" | sha256sum -c -",
+            "chmod +x rustup-init",
+            "./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch}",
+            "rm rustup-init",
+            "chmod -R a+w $RUSTUP_HOME $CARGO_HOME",
+            "rustup --version",
+            "cargo --version",
+            "rustc --version",
+            "apt-get remove -y --auto-remove         wget",
+            "rm -rf /var/lib/apt/lists/*",
+            ""
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-05-15T18:30:00+06:00",
+          "inst_set_time_index": 0,
+          "inst_set_time_reverse_index": 1
+        },
+        {
+          "type": "RUN",
+          "time": "2025-06-25T09:05:52Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 33202250,
+          "size_human": "33 MB",
+          "command_snippet": "RUN apt-get update && \\\n\tapt-get install -y ...",
+          "command_all": "RUN apt-get update && \\\n\tapt-get install -y pkg-config libssl-dev",
+          "system_commands": [
+            "apt-get update",
+            "apt-get install -y pkg-config libssl-dev"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-06-25T15:00:00+06:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "WORKDIR",
+          "time": "2025-06-25T09:05:52Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "/app",
+          "command_snippet": "WORKDIR /app",
+          "command_all": "WORKDIR /app",
+          "system_commands": [
+            "mkdir -p /app"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-06-25T15:00:00+06:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "COPY",
+          "time": "2025-06-25T09:08:18Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 49539,
+          "size_human": "50 kB",
+          "params": ". .",
+          "command_snippet": "COPY . .",
+          "command_all": "COPY . .",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-06-25T15:00:00+06:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "RUN",
+          "time": "2025-06-25T09:08:33Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 288045990,
+          "size_human": "288 MB",
+          "command_snippet": "RUN cargo build --release",
+          "command_all": "RUN cargo build --release",
+          "system_commands": [
+            "cargo build --release"
+          ],
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-06-25T15:00:00+06:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "EXPOSE",
+          "time": "2025-06-25T09:08:33Z",
+          "is_nop": false,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "params": "8080/tcp",
+          "command_snippet": "EXPOSE 8080/tcp",
+          "command_all": "EXPOSE 8080/tcp",
+          "comment": "buildkit.dockerfile.v0",
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-06-25T15:00:00+06:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 0
+        },
+        {
+          "type": "CMD",
+          "time": "2025-06-25T09:08:33Z",
+          "is_last_instruction": true,
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"./target/release/rably\"]\n",
+          "command_snippet": "CMD [\"./target/release/rably\"]\n",
+          "command_all": "CMD [\"./target/release/rably\"]\n",
+          "comment": "buildkit.dockerfile.v0",
+          "raw_tags": [
+            "rably:latest"
+          ],
+          "is_buildkit_instruction": true,
+          "inst_set_time_bucket": "2025-06-25T15:00:00+06:00",
+          "inst_set_time_index": 1,
+          "inst_set_time_reverse_index": 0
+        }
+      ]
+    }
+  ],
+  "image_created": true,
+  "image_build_engine": "internal"
+}
