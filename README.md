@@ -11,6 +11,7 @@ for more info about slim[https://github.com/slimtoolkit/slim?tab=readme-ov-file#
 slim build --target rably:latest --tag rably:slim --image-build-arch amd64
 ```
 
+
 ## push to github
 ```bash
 docker tag rably:slim ghcr.io/rovierrhq/rably:slim
