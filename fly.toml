@@ -1,4 +1,4 @@
-app = 'rably-websocket'
+app = 'rably'
 primary_region = 'sjc'
 kill_signal = 'SIGTERM'
 kill_timeout = '5s'

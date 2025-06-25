@@ -105,7 +105,7 @@ async fn main() {
 async fn health_check() -> impl IntoResponse {
     serde_json::json!({
         "status": "healthy",
-        "service": "rably-websocket",
+        "service": "rably",
         "timestamp": chrono::Utc::now().timestamp()
     }).to_string()
 }
